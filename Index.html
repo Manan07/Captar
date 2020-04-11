@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+   <!-- Page Head \_(-_-)_/ -->
+
+    <meta charset="utf-8">
+    <title>Captar - Live Streaming</title>
+
+   <!-- Page Information ( ͡° ͜ʖ ͡°)  -->
+
+   <meta name="author" content="Manan Chaturvedi" />
+   <meta name="description" content="" />
+   <meta name="keywords" content="" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <!-- Stylesheets (~.~) -->
+
+    <link rel="stylesheet" href="Styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="Styles/skeleton.css" type="text/css"> 
+    <link rel="stylesheet" href="Styles/Style.css" type="text/css">
+
+  </head>
+<body>
+
+<header>
+  <img class="Logo" src="Elements/Logo/1.svg" alt="Logo">
+  
+  <img class="Ham" src="Elements/Ham/1.svg" alt="Ham">
+
+  <div class="HamBody">
+    <nav>
+      <a href="#">Chat</a>
+      <a href="#">Repo</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="Input">
+ <div class="Form">
+    <input required placeholder="Peer ID" type="text" id="Conn" class="Conn-Field">
+   <input class="Conn-Now" value="Connect" type="submit" id="ConnB">
+ </div>
+ <div class="PeerInfo">
+  <p class="PeerId">Peer Connection not Established!</p>
+ </div>
+</section>
+
+<section class="Container">
+ <div class="Self">
+  <video autoplay muted="false" class="Own"></video>
+ </div>
+
+ <div class="Peer">
+  <video autoplay muted="false" class="Opp"></video>
+ </div>
+</section>
+
+<script src="Actions/peer.min.js" charset="utf-8"></script>
+<script src="Actions/Actions.js" charset="utf-8"></script>
+</body>
+</html>
