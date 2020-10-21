@@ -76,7 +76,7 @@ ConnBtn.addEventListener('click', () => {
 
  conn.on('open', function(){
   // here you have conn.id
-  navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+  navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(function(stream) {
    var call = peer.call(ID, stream);
    call.on('stream', function(remoteStream) {
       Opp.srcObject = remoteStream
@@ -87,7 +87,7 @@ ConnBtn.addEventListener('click', () => {
 })
 
 peer.on('connection', function(conn) {
- navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream){
+ navigator.mediaDevices.getUserMedia({ video: true, audio: true}).then(function(stream){
   peer.on('call', function(call) {
   // Answer the call, providing our mediaStream
   call.answer(stream);
@@ -99,7 +99,7 @@ peer.on('connection', function(conn) {
 })
 });
 
-navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(function(stream) {
 // video.src = window.URL.createObjectURL(stream);
 Own.srcObject = stream
 // // $('#my-video').prop('src', stream);
